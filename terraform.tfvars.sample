@@ -1,0 +1,5 @@
+region             = "ap-northeast-1"
+access_key         = "AKIA*************"
+secret_key         = "*****************"
+availability_zones = ["ap-northeast-1a"]
+prefix             = "dev"

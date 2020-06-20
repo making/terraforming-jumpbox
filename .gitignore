@@ -1,0 +1,5 @@
+.terraform
+plan
+jumpbox.pem
+terraform.tfstate*
+terraform.tfvars

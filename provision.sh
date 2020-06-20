@@ -105,6 +105,15 @@ if [ ! -f ${PROVISION}/uaac ];then
   touch ${PROVISION}/uaac
 fi
 
+if [ ! -f ${PROVISION}/lego ];then
+  LEGO_VERSION=3.7.0
+  wget -q -O lego.tgz https://github.com/go-acme/lego/releases/download/v${LEGO_VERSION}/lego_v${LEGO_VERSION}_linux_amd64.tar.gz && \
+    tar xzf lego.tgz && \
+    sudo install lego /usr/local/bin && \
+    rm -f lego* CHANGELOG.md lego
+  touch ${PROVISION}/lego
+fi
+
 if [ ! -f ${PROVISION}/yj ];then
   YJ_VERSION=4.0.0
   wget -q -O yj https://github.com/sclevine/yj/releases/download/v${YJ_VERSION}/yj-linux && \

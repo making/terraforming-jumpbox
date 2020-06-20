@@ -22,3 +22,14 @@ pivnet download-product-files --product-slug='platform-automation' --release-ver
 tar xvf platform-automation-image-4.4.3.tgz ./rootfs/usr/bin/p-automator
 sudo install rootfs/usr/bin/p-automator /usr/local/bin/
 ```
+
+## How to install `pks` on the jumpbox vm
+
+
+```
+pivnet login --api-token=****
+mkdir pks
+cd pks/
+pivnet download-product-files --product-slug='pivotal-container-service' --release-version='1.7.0' --product-file-id=646536
+sudo install pks-linux-amd64-1.7.0-build.483 /usr/local/bin/pks
+```

@@ -8,7 +8,7 @@ terraform apply plan
 
 ```
 ./ssh-jumpbox.sh
-$ chomod +x ./provison.sh && ./provison.sh
+$ chmod +x ./provision.sh && ./provision.sh
 ```
 
 ## How to install `p-automator` on the jumpbox vm

@@ -100,6 +100,14 @@ if [ ! -f ${PROVISION}/credhub ];then
   touch ${PROVISION}/credhub
 fi
 
+if [ ! -f ${PROVISION}/bbr ];then
+  BBR_VERSION=1.7.2
+  wget -q -O bbr https://github.com/cloudfoundry-incubator/bosh-backup-and-restore/releases/download/v${BBR_VERSION}/bbr-${BBR_VERSION}-linux-amd64 && \
+    sudo install bbr /usr/local/bin/ && \
+    rm -f bbr*
+  touch ${PROVISION}/bbr
+fi
+
 if [ ! -f ${PROVISION}/uaac ];then
   sudo gem install cf-uaac
   touch ${PROVISION}/uaac
